@@ -44,7 +44,7 @@ p {
 }
 
 .header__logo-wrapper_title p {
-  margin: 8px 0 0;
+  margin: calc(8 / 1920 * 100vw) 0 0;
   color: #fff;
   font-weight: 400;
   font-style: normal;
@@ -61,6 +61,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-self: flex-end;
+  align-items: center;
 }
 
 .header__nav_contact-info-social-media ul {
@@ -73,13 +74,13 @@ p {
 .header__nav_contact-info-contacts {
   display: flex;
   width: calc((209 / 1920) * 100vw);
-  height: 52px;
+  height: calc(52 / 1920 * 100vw);
   justify-content: space-between;
 }
 
 .header__nav_contact-info-contacts img {
-  height: 30px;
-  width: 30px;
+  height: calc(30 / 1920 * 100vw);
+  width: calc(30 / 1920 * 100vw);
   align-self: center;
 }
 
@@ -99,12 +100,13 @@ p {
 .header__nav_site-nav {
   display: flex;
   margin-top: calc(15 / 1920 * 100vw);
+  align-items: center;
 }
 
 .header__nav_site-nav ul {
   display: flex;
   list-style: none;
-  margin-right: calc(23 / 1920 * 100vw);
+  margin: 0 calc(23 / 1920 * 100vw) 0 0;
   gap: calc(30 / 1920 * 100vw);
   padding: 0;
 }
@@ -148,13 +150,14 @@ p {
   width: calc(359 / 1920 * 100vw);
   height: calc(60 / 1920 * 100vw);
   border-radius: calc(40 / 1920 * 100vw);
+  /* padding: calc(18 / 1920 * 100vw) calc(28 / 1920 * 100vw); */
 }
 
 .description {
   display: flex;
   gap: calc(62 / 1920 * 100vw);
-  padding: 12px 0 0 calc(151 / 1920 * 100vw);
-  margin-top: 12px;
+  padding: calc(12 / 1920 * 100vw) 0 0 calc(151 / 1920 * 100vw);
+  margin-top: calc(12 / 1920 * 100vw);
   position: relative;
 }
 
@@ -164,7 +167,7 @@ p {
   line-height: calc(60 / 1920 * 100vw);
   text-transform: uppercase;
   color: var(--grey);
-  margin-top: 109px;
+  margin-top: calc(109 / 1920 * 100vw);
 }
 
 .description__title span {
@@ -191,6 +194,8 @@ p {
   position: absolute;
   top: calc(51 / 1920 * 100vw);
   left: calc(879 / 1920 * 100vw);
+  width: calc(372 / 1920 * 100vw);
+  height: calc(245 / 1920 * 100vw);
 }
 
 .services {
@@ -202,13 +207,13 @@ p {
   text-align: center;
   font-weight: 700;
   font-size: calc(40 / 1920 * 100vw);
-  line-height: 60px;
+  line-height: calc(60 / 1920 * 100vw);
   text-transform: uppercase;
   color: var(--grey);
 }
 
 .services__wrapper {
-  margin-top: 76px;
+  margin-top: calc(76 / 1920 * 100vw);
   display: flex;
 }
 
@@ -225,7 +230,6 @@ p {
   display: flex;
   gap: calc(30 / 1920 * 100vw);
   width: calc((382 * 7 + 30 * 6) / 1920 * 100vw);
-  /* transform: translateX(calc(-412 * 3 / 1920 * 100vw)); */
 }
 
 .card {
@@ -254,7 +258,6 @@ p {
 
 .card .price {
   color: var(--red);
-  /* width: calc(210 / 1920 * 100vw); */
 }
 
 .card .price span {
@@ -262,16 +265,16 @@ p {
 }
 
 .card ul {
-  margin: 14px 0;
+  margin: calc(14 / 1920 * 100vw) 0;
   padding: 0 0 0 calc(20 / 1920 * 100vw);
-  height: 240px;
+  height: calc(240 / 1920 * 100vw);
 }
 
 .line {
   width: 100%;
   background-color: #e6e7e8;
   height: 1px;
-  margin-top: 28px;
+  margin-top: calc(28 / 1920 * 100vw);
 }
 
 .card li {
@@ -279,11 +282,6 @@ p {
   font-size: calc(16 / 1920 * 100vw);
   line-height: calc(30 / 1920 * 100vw);
 }
-
-/* .card li::marker {
-  display: block;
-  font-size: 10px;
-} */
 
 .card .button {
   width: calc(225 / 1920 * 100vw);
@@ -303,8 +301,8 @@ p {
 }
 
 .arrow {
-  width: 21px;
-  height: 18px;
+  width: calc(21 / 1920 * 100vw);
+  height: calc(18 / 1920 * 100vw);
 }
 
 .info {
@@ -372,7 +370,7 @@ p {
   font-weight: 600;
   color: var(--grey);
   font-size: calc(18 / 1920 * 100vw);
-  margin: 15px 0 0 0;
+  margin: calc(15 / 1920 * 100vw) 0 0 0;
 }
 
 .plus p {
@@ -380,6 +378,11 @@ p {
   color: var(--grey);
   line-height: calc(33 / 1920 * 100vw);
   margin-top: calc(34 / 1920 * 100vw);
+}
+
+.plus img {
+  width: calc(150 / 1920 * 100vw);
+  height: calc(150 / 1920 * 100vw);
 }
 
 .about-team__wrapper:nth-child(3) {
@@ -470,8 +473,8 @@ p {
 
 .guarantees {
   background-color: rgba(52, 152, 219, 0.1);
-  padding: 46px 0 72px;
-  margin-top: 141px;
+  padding: calc(46 / 1920 * 100vw) 0 calc(72 / 1920 * 100vw);
+  margin-top: calc(141 / 1920 * 100vw);
 }
 
 .guarantees__title {
@@ -486,7 +489,7 @@ p {
 
 .guarantees__cards {
   margin-left: calc(323 / 1920 * 100vw);
-  margin-top: 75px;
+  margin-top: calc(75 / 1920 * 100vw);
   display: flex;
   gap: calc(150 / 1920 * 100vw);
 }
@@ -506,7 +509,7 @@ p {
   line-height: 184.5%;
   color: var(--grey);
   width: calc(325 / 1920 * 100vw);
-  margin-top: 28px;
+  margin-top: calc(28 / 1920 * 100vw);
 }
 
 .guarantees__cards span {
@@ -529,7 +532,7 @@ p {
 }
 
 .guarantees__cards-row:nth-child(2) {
-  margin-top: 43px;
+  margin-top: calc(43 / 1920 * 100vw);
 }
 
 .footer {
@@ -588,7 +591,7 @@ p {
 }
 
 .footer h6:nth-child(3) {
-  margin-top: 18px;
+  margin-top: calc(18 / 1920 * 100vw);
 }
 
 .footer p {
