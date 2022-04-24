@@ -23,6 +23,46 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <div class="background disable"></div>
+    <div class="modal disable">
+      <img class="cross" src="./assets/images/cross.svg" alt="cross" />
+      <h1>Заказать консультацию</h1>
+      <h2>С чем тебе требуется помощь?</h2>
+      <form>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: calc(30 / 1920 * 100vw);
+          "
+        >
+          <input type="tel" placeholder="Телефон *" />
+          <input type="text" placeholder="Вид работы" />
+        </div>
+        <p class="task">Опиши задачу</p>
+        <textarea name="task" id="id"></textarea>
+        <div class="contacts">
+          <p>Телефон:</p>
+          <p>+7 925 877 22 25</p>
+          <p>+375 29 169 70 00</p>
+        </div>
+        <div class="bottom">
+          <button class="button">Отправить</button>
+          <div class="social-media">
+            <ul>
+              <li><img src="./assets/images/viber-red.svg" alt="viber" /></li>
+              <li><img src="./assets/images/tg-red.svg" alt="telegram" /></li>
+              <li><img src="./assets/images/tel-red.svg" alt="whatsapp" /></li>
+              <li><img src="./assets/images/vk-red.svg" alt="vk" /></li>
+            </ul>
+          </div>
+          <div class="mail">
+            <p>Электронная почта:</p>
+            <p>ghostwriters.info@gmail.com</p>
+          </div>
+        </div>
+      </form>
+    </div>
     <header class="header">
       <div class="header__logo-wrapper">
         <div class="header__logo-wrapper_img">
@@ -191,8 +231,14 @@
           <div class="space"></div>
         </div>
         <div class="arrows">
-          <img class="arrow" src="./assets/images/arrow_left.svg" alt="arrow" />
           <img
+            data-direction="left"
+            class="arrow"
+            src="./assets/images/arrow_left.svg"
+            alt="arrow"
+          />
+          <img
+            data-direction="right"
             class="arrow"
             src="./assets/images/arrow_right.svg"
             alt="arrow"
