@@ -329,20 +329,12 @@ p {
   cursor: pointer;
 }
 
-.arrow:first-child:hover {
-  content: url('./assets/images/arrow_left-hover.svg');
+.arrow:hover path {
+  stroke: #d82e32;
 }
 
-.arrow:nth-child(2):hover {
-  content: url('./assets/images/arrow_right-hover.svg');
-}
-
-.arrow:first-child:active {
-  content: url('./assets/images/arrow_left-active.svg');
-}
-
-.arrow:nth-child(2):active {
-  content: url('./assets/images/arrow_right-active.svg');
+.arrow:active path {
+  stroke: #b72023;
 }
 
 .info {
