@@ -34,12 +34,12 @@ arrows.forEach((item) => {
 
 function scrollCarousel(event) {
   switch (event.target.dataset.direction) {
-    case 'left': {
+    case 'right': {
       if (counter === -3) return;
       cards.style.transform = `translateX(${(412 / 1920) * 100 * --counter}vw)`;
       break;
     }
-    case 'right': {
+    case 'left': {
       if (counter === 0) return;
       cards.style.transform = `translateX(${(412 / 1920) * 100 * ++counter}vw)`;
     }
