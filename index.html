@@ -23,12 +23,28 @@
     <script defer src="index.js"></script>
   </head>
   <body>
-    <div class="background disable"></div>
-    <div class="modal disable">
+    <div class="background"></div>
+    <div class="modal">
+      <div class="dropdown disable">
+        <ul>
+          <li>Курсовая работа</li>
+          <li>Дипломная работа</li>
+          <li>Магистерская диссертация</li>
+          <li>Эссе</li>
+          <li>Реферат</li>
+          <li>Статья</li>
+          <li>Другое</li>
+        </ul>
+      </div>
       <img class="cross" src="./assets/images/cross.svg" alt="cross" />
       <h1>Заказать консультацию</h1>
       <h2>С чем тебе требуется помощь?</h2>
       <form>
+        <img
+          class="arrow"
+          src="./assets/images/dropdown_arrow.svg"
+          alt="arrow"
+        />
         <div
           style="
             display: flex;
@@ -37,7 +53,12 @@
           "
         >
           <input type="tel" placeholder="Телефон *" />
-          <input type="text" placeholder="Вид работы" />
+          <input
+            readonly
+            type="text"
+            value="Курсовая работа"
+            placeholder="Вид работы"
+          />
         </div>
         <p class="task">Опиши задачу</p>
         <textarea name="task" id="id"></textarea>

@@ -29,8 +29,6 @@ const arrowsSvg = document.querySelectorAll('.arrow path');
 
 let counter = 0;
 
-console.log(arrowsSvg);
-
 arrowsController('left', 'off');
 
 arrows.forEach((item) => {
@@ -69,3 +67,20 @@ function arrowsController(direction, toggle) {
     arrowsSvg[3].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
   }
 }
+
+//modal dropdown logic
+const dropdownArrow = document.querySelector('.modal .arrow');
+const dropdown = document.querySelector('.modal .dropdown');
+const dropdownItems = document.querySelectorAll('.modal .dropdown li');
+const input = document.querySelector('.modal form input[type="text"]');
+
+dropdownArrow.addEventListener('click', () => {
+  dropdown.classList.toggle('disable');
+});
+
+dropdownItems.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    input.value = event.target.textContent;
+    dropdown.classList.add('disable');
+  });
+});

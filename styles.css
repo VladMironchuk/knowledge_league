@@ -176,7 +176,7 @@ p {
   line-height: calc(60 / 1920 * 100vw);
   text-transform: uppercase;
   color: var(--grey);
-  margin-top: calc(109 / 1920 * 100vw);
+  margin-top: calc(92 / 1920 * 100vw);
 }
 
 .description__title span {
@@ -201,10 +201,11 @@ p {
 
 .seal {
   position: absolute;
-  top: calc(51 / 1920 * 100vw);
+  top: calc(80 / 1920 * 100vw);
   left: calc(879 / 1920 * 100vw);
-  width: calc(372 / 1920 * 100vw);
-  height: calc(245 / 1920 * 100vw);
+  width: calc(344 / 1920 * 100vw);
+  height: calc(144 / 1920 * 100vw);
+  transform: rotate(18.25deg);
 }
 
 .services {
@@ -272,6 +273,12 @@ p {
 
 .card .price span {
   font-size: calc(60 / 1920 * 100vw);
+  margin: 0 calc(11 / 1920 * 100vw);
+}
+
+.card .time {
+  font-size: 12px;
+  color: var(--grey);
 }
 
 .card ul {
@@ -664,7 +671,7 @@ p {
 
 .background {
   width: 100vw;
-  height: calc(940 / 1920 * 100vw);
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -830,4 +837,37 @@ p {
 
 .cross:hover {
   cursor: pointer;
+}
+
+.modal .dropdown {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  top: calc(207 / 1920 * 100vw);
+  left: calc(338 / 1290 * 100vw);
+  width: calc(418 / 1920 * 100vw);
+}
+
+.modal .dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal .dropdown li {
+  color: #999999;
+  font-size: calc(18 / 1920 * 100vw);
+  line-height: calc(33 / 1920 * 100vw);
+  padding-left: 8px;
+}
+
+.modal .dropdown li:hover {
+  background: rgba(196, 196, 196, 0.2);
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.modal form .arrow {
+  position: absolute;
+  right: calc(62 / 1920 * 100vw);
 }
