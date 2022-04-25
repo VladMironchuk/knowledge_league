@@ -330,11 +330,11 @@ p {
 }
 
 .arrow:hover path {
-  stroke: #d82e32;
+  stroke: #d82e32 !important;
 }
 
 .arrow:active path {
-  stroke: #b72023;
+  stroke: #b72023 !important;
 }
 
 .info {

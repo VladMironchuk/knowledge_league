@@ -25,8 +25,13 @@ function hideModal() {
 
 //logic connected to a carousel
 const arrows = document.querySelectorAll('.arrow');
+const arrowsSvg = document.querySelectorAll('.arrow path');
 
 let counter = 0;
+
+console.log(arrowsSvg);
+
+arrowsController('left', 'off');
 
 arrows.forEach((item) => {
   item.addEventListener('click', scrollCarousel);
@@ -35,13 +40,32 @@ arrows.forEach((item) => {
 function scrollCarousel(event) {
   switch (event.currentTarget.dataset.direction) {
     case 'right': {
-      if (counter === -3) return;
+      if (counter === -3) {
+        arrowsController('right', 'off');
+        return;
+      }
+      arrowsController('left', 'on');
       cards.style.transform = `translateX(${(412 / 1920) * 100 * --counter}vw)`;
       break;
     }
     case 'left': {
-      if (counter === 0) return;
+      if (counter === 0) {
+        arrowsController('left', 'off');
+        return;
+      }
+      arrowsController('right', 'on');
       cards.style.transform = `translateX(${(412 / 1920) * 100 * ++counter}vw)`;
     }
+  }
+}
+
+function arrowsController(direction, toggle) {
+  if (direction === 'left') {
+    arrowsSvg[0].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+    arrowsSvg[1].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+  }
+  if (direction === 'right') {
+    arrowsSvg[2].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+    arrowsSvg[3].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
   }
 }
