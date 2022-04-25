@@ -84,3 +84,12 @@ dropdownItems.forEach((item) => {
     dropdown.classList.add('disable');
   });
 });
+
+document.body.addEventListener('click', (event) => {
+  if (
+    !dropdown.classList.contains('disable') &&
+    !event.composedPath().includes(dropdownArrow)
+  ) {
+    dropdown.classList.add('disable');
+  }
+});
