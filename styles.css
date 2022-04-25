@@ -871,3 +871,35 @@ p {
   position: absolute;
   right: calc(62 / 1920 * 100vw);
 }
+
+.modal .error {
+  position: absolute;
+  top: calc(205 / 1920 * 100vw);
+  transition: all 300ms;
+}
+
+.modal .error img:nth-child(1) {
+  position: absolute;
+  width: calc(14 / 1920 * 100vw);
+  height: calc(12 / 1920 * 100vw);
+  top: calc(9 / 1920 * 100vw);
+  left: 3px;
+}
+
+.modal .error img:nth-child(2) {
+  width: 4.5px;
+  height: 4.5px;
+  position: absolute;
+}
+
+.modal .error p {
+  font-size: calc(16 / 1920 * 100vw);
+  line-height: calc(22 / 1920 * 100vw);
+  color: #fff;
+  background-color: var(--red);
+  padding-left: calc(22 / 1920 * 100vw);
+  padding-right: 5px;
+  border-radius: 0px 3px 3px 3px;
+  margin-bottom: 3px;
+  margin-top: 4px;
+}

@@ -93,3 +93,19 @@ document.body.addEventListener('click', (event) => {
     dropdown.classList.add('disable');
   }
 });
+
+//modal validation
+const modalForm = document.querySelector('.modal form');
+const phoneInput = document.querySelector('.modal form input[type="tel"]');
+const validationError = document.querySelector('.modal .error');
+
+modalForm.addEventListener('submit', (event) => {
+  if (phoneInput.value === '') {
+    event.preventDefault();
+    validationError.classList.remove('disable');
+  }
+});
+
+phoneInput.addEventListener('input', () => {
+  validationError.classList.add('disable');
+});
