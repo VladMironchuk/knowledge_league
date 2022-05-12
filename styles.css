@@ -923,7 +923,7 @@ p {
   margin-top: 4px;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 500px) {
   .header {
     padding: calc(10 / 375 * 100vw) calc(15 / 375 * 100vw);
   }
@@ -1301,7 +1301,7 @@ p {
   .about-team__container {
     overflow: hidden;
     display: flex;
-    margin: 0 calc(40px);
+    margin: 0 calc(40 / 375 * 100vw);
   }
 
   .about-team__wrapper {
