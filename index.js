@@ -36,7 +36,7 @@ arrows.forEach((item) => {
 });
 
 function scrollCarousel(event) {
-  if (window.matchMedia('(max-width: 376px)').matches) {
+  if (window.matchMedia('(max-width: 500px)').matches) {
     switch (event.currentTarget.dataset.direction) {
       case 'right': {
         if (counter === -6) {
@@ -172,7 +172,7 @@ guaranteesArrows.forEach((item) => {
 const arrows2Container = document.querySelector('.arrows2');
 
 window.addEventListener('load', () => {
-  if (window.matchMedia('(max-width: 376px)').matches) {
+  if (window.matchMedia('(max-width: 500px)').matches) {
     arrows2Container.style.display = 'flex';
   }
 });
