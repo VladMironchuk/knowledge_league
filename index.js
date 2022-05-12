@@ -36,23 +36,53 @@ arrows.forEach((item) => {
 });
 
 function scrollCarousel(event) {
-  switch (event.currentTarget.dataset.direction) {
-    case 'right': {
-      if (counter === -3) {
-        arrowsController('right', 'off');
-        return;
+  if (window.matchMedia('(max-width: 376px)').matches) {
+    switch (event.currentTarget.dataset.direction) {
+      case 'right': {
+        if (counter === -6) {
+          arrowsController('right', 'off');
+          return;
+        }
+        arrowsController('left', 'on');
+        cards.style.transform = `translateX(${
+          (305 / 375) * 100 * --counter
+        }vw)`;
+        break;
       }
-      arrowsController('left', 'on');
-      cards.style.transform = `translateX(${(412 / 1920) * 100 * --counter}vw)`;
-      break;
+      case 'left': {
+        if (counter === 0) {
+          arrowsController('left', 'off');
+          return;
+        }
+        arrowsController('right', 'on');
+        cards.style.transform = `translateX(${
+          (305 / 375) * 100 * ++counter
+        }vw)`;
+      }
     }
-    case 'left': {
-      if (counter === 0) {
-        arrowsController('left', 'off');
-        return;
+  } else {
+    switch (event.currentTarget.dataset.direction) {
+      case 'right': {
+        if (counter === -3) {
+          arrowsController('right', 'off');
+          return;
+        }
+        arrowsController('left', 'on');
+        cards.style.transform = `translateX(${
+          (412 / 1920) * 100 * --counter
+        }vw)`;
+        break;
       }
-      arrowsController('right', 'on');
-      cards.style.transform = `translateX(${(412 / 1920) * 100 * ++counter}vw)`;
+      case 'left': {
+        if (counter === 0) {
+          arrowsController('left', 'off');
+          return;
+        }
+        arrowsController('right', 'on');
+        cards.style.transform = `translateX(${
+          (412 / 1920) * 100 * ++counter
+        }vw)`;
+      }
     }
   }
 }
@@ -108,4 +138,90 @@ modalForm.addEventListener('submit', (event) => {
 
 phoneInput.addEventListener('input', () => {
   validationError.classList.add('disable');
+});
+
+//mobile version
+
+//dropdown guarantees
+
+const onClick = ({ target }) => {
+  let currentIndex;
+  guaranteesArrows.forEach((item, index) => {
+    if (item === target) {
+      currentIndex = index;
+    }
+  });
+  if (target.classList.contains('rotate')) {
+    target.classList.remove('rotate');
+    guaranteesTexts[currentIndex].style.display = 'none';
+  } else {
+    target.classList.add('rotate');
+    guaranteesTexts[currentIndex].style.display = 'block';
+  }
+};
+
+const guaranteesArrows = document.querySelectorAll('.guarantees img');
+const guaranteesTexts = document.querySelectorAll('.guarantees__cards p');
+
+guaranteesArrows.forEach((item) => {
+  item.addEventListener('click', onClick);
+});
+
+//about team carousel
+
+const arrows2Container = document.querySelector('.arrows2');
+
+window.addEventListener('load', () => {
+  if (window.matchMedia('(max-width: 376px)').matches) {
+    arrows2Container.style.display = 'flex';
+  }
+});
+
+const arrows2 = document.querySelectorAll('.arrow2');
+const pluses = document.querySelectorAll('.about-team__wrapper');
+
+arrows2.forEach((item) => {
+  item.addEventListener('click', onClickArrows2);
+});
+
+let counter2 = 0;
+function onClickArrows2(e) {
+  switch (e.currentTarget.dataset.direction) {
+    case 'right':
+      if (counter2 === -4) return;
+      pluses.forEach((plus) => {
+        plus.style.transform = `translateX(${
+          (296 / 375) * 100 * (counter2 - 1)
+        }vw)`;
+      });
+      --counter2;
+      break;
+    case 'left':
+      if (counter2 === 0) return;
+      pluses.forEach((plus) => {
+        plus.style.transform = `translateX(${
+          (296 / 375) * 100 * (counter2 + 1)
+        }vw)`;
+      });
+      ++counter2;
+      break;
+  }
+}
+
+//header dropdown
+
+const headerDropdown = document.querySelector('.header__dropdown');
+const headerBurger = document.querySelector('.header__burger ');
+const headerBurgerCross = document.querySelector('.header__burger img');
+
+headerDropdown.addEventListener('click', () => {
+  background.classList.remove('disable');
+  headerBurger.classList.remove('off');
+  document.body.style.overflowY = 'hidden';
+});
+
+headerBurgerCross.addEventListener('click', () => {
+  background.classList.add('disable');
+  headerBurger.classList.add('off');
+  document.body.style.overflowY = 'overlay';
 });

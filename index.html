@@ -50,13 +50,7 @@
           src="./assets/images/dropdown_arrow.svg"
           alt="arrow"
         />
-        <div
-          style="
-            display: flex;
-            justify-content: space-between;
-            gap: calc(30 / 1920 * 100vw);
-          "
-        >
+        <div class="modal-input-wrapper">
           <input type="tel" placeholder="Телефон *" />
           <input
             readonly
@@ -89,7 +83,19 @@
         </div>
       </form>
     </div>
+    <div class="header__burger off">
+      <img src="./assets/images/cross.svg" alt="cross" />
+      <ul>
+        <li>О нас</li>
+        <li>Виды работ</li>
+        <li>Почему выбирают нас</li>
+        <li>Как мы работаем</li>
+        <li>Наши гарантии</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
     <header class="header">
+      <img class="header__dropdown" src="./assets/images/dropdown_header.svg" />
       <div class="header__logo-wrapper">
         <div class="header__logo-wrapper_img">
           <img src="./assets/images/logo.svg" alt="лига знаний" />
@@ -144,11 +150,17 @@
           </p>
           <button class="button">Заказать консультацию</button>
         </div>
-        <img
-          class="description__img"
-          src="./assets/images/unsplash_OQSCtabGkSY.png"
-          alt="лига знаний"
-        />
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/yellow_375.png"
+          />
+          <img
+            class="description__img"
+            src="./assets/images/unsplash_OQSCtabGkSY.png"
+            alt="лига знаний"
+          />
+        </picture>
       </section>
       <section class="services">
         <h1 class="services__title">виды работ</h1>
@@ -308,7 +320,16 @@
         </div>
       </section>
       <section class="info">
-        <img src="./assets/images/unsplash_-2vD8lIhdnw.png" alt="лига знаний" />
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/paper_375.png"
+          />
+          <img
+            src="./assets/images/unsplash_-2vD8lIhdnw.png"
+            alt="лига знаний"
+          />
+        </picture>
         <div class="info__content">
           <p>
             не знаешь, с чего начать? Поможем с
@@ -319,54 +340,116 @@
       </section>
       <section class="about-team">
         <h1>почему выбирают нас?</h1>
-        <div class="about-team__wrapper">
-          <div class="plus">
-            <img src="./assets/images/money.svg" alt="money" />
-            <h6>Гарантия качества</h6>
-            <p>
-              У нас минимальная предоплата. Ты внесешь основной платеж, когда
-              работа будет выполнена и мы покажем результат.
-            </p>
+        <div class="about-team__container">
+          <div class="about-team__wrapper">
+            <div class="plus">
+              <img src="./assets/images/money.svg" alt="money" />
+              <h6>Гарантия качества</h6>
+              <p>
+                У нас минимальная предоплата. Ты внесешь основной платеж, когда
+                работа будет выполнена и мы покажем результат.
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/team.svg" alt="team" />
+              <h6>Сильная команда</h6>
+              <p>
+                Тщательный подход к выбору эксперта, который выполнит твой
+                заказ. В нашей команде 12 кандидатов наук, 2 доктора наук и 6
+                аспирантов.
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/medal.svg" alt="medal" />
+              <h6>Качество услуг</h6>
+              <p>
+                Мы дорожим каждым клиентом, поэтому держим на высоте качество
+                оказываемыx услуг, ведь вы - будущее нашей компании!
+              </p>
+            </div>
           </div>
-          <div class="plus">
-            <img src="./assets/images/team.svg" alt="team" />
-            <h6>Сильная команда</h6>
-            <p>
-              Тщательный подход к выбору эксперта, который выполнит твой заказ.
-              В нашей команде 12 кандидатов наук, 2 доктора наук и 6 аспирантов.
-            </p>
-          </div>
-          <div class="plus">
-            <img src="./assets/images/medal.svg" alt="medal" />
-            <h6>Качество услуг</h6>
-            <p>
-              Мы дорожим каждым клиентом, поэтому держим на высоте качество
-              оказываемыx услуг, ведь вы - будущее нашей компании!
-            </p>
+          <div class="about-team__wrapper">
+            <div class="plus">
+              <img src="./assets/images/manager.svg" alt="manager" />
+              <h6>Личный менеджер</h6>
+              <p>
+                Подберем для тебя личного менеджера с углубленными знаниями по
+                предмету. Кстати, ты можешь звонить ему даже ночью :)
+              </p>
+            </div>
+            <div class="plus">
+              <img src="./assets/images/money.svg" alt="money" />
+              <h6>Бесплатные правки</h6>
+              <p>
+                После сдачи заказа, мы ждем рецензии твоего научного
+                руководителя. Все корректировки мы сделаем бесплатно, ведь вы
+                платите только за результат.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="about-team__wrapper">
-          <div class="plus">
-            <img src="./assets/images/manager.svg" alt="manager" />
-            <h6>Личный менеджер</h6>
-            <p>
-              Подберем для тебя личного менеджера с углубленными знаниями по
-              предмету. Кстати, ты можешь звонить ему даже ночью :)
-            </p>
-          </div>
-          <div class="plus">
-            <img src="./assets/images/money.svg" alt="money" />
-            <h6>Бесплатные правки</h6>
-            <p>
-              После сдачи заказа, мы ждем рецензии твоего научного руководителя.
-              Все корректировки мы сделаем бесплатно, ведь вы платите только за
-              результат.
-            </p>
-          </div>
+        <div class="arrows2" style="display: none">
+          <svg
+            data-direction="left"
+            class="arrow2"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.07053 10.3652L21.0703 10.2729"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M9.77832 1.3252L1.06993 10.3655L9.86136 19.325"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            data-direction="right"
+            class="arrow2"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.2078 10.2727L1.20801 10.365"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12.416 1.31323L21.2074 10.2728L12.4991 19.313"
+              stroke="#F64C71"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
       </section>
       <section class="info">
-        <img src="./assets/images/unsplash_744oGeqpxPQ.png" alt="лига знаний" />
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/comp_375.png"
+          />
+          <img
+            src="./assets/images/unsplash_744oGeqpxPQ.png"
+            alt="лига знаний"
+          />
+        </picture>
         <div class="info__content">
           <p>
             мы работаем со всеми системами
@@ -378,21 +461,39 @@
       </section>
       <section class="working">
         <h1>как мы работаем</h1>
-        <img
-          class="working__arrow"
-          src="./assets/images/arrow_top.svg"
-          alt=""
-        />
-        <img
-          class="working__arrow"
-          src="./assets/images/arrow_bottom.svg"
-          alt=""
-        />
-        <img
-          class="working__arrow"
-          src="./assets/images/arrow_top.svg"
-          alt=""
-        />
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow first"
+            src="./assets/images/arrow_top.svg"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow second"
+            src="./assets/images/arrow_bottom.svg"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            media="(max-width: 376px)"
+            srcset="./assets/images/about_team-arrow.svg"
+          />
+          <img
+            class="working__arrow third"
+            src="./assets/images/arrow_top.svg"
+            alt=""
+          />
+        </picture>
         <div class="working__cases">
           <div class="case">
             <img src="./assets/images/how1.png" alt="" />
@@ -428,7 +529,11 @@
         <h1 class="guarantees__title">наши гарантии</h1>
         <div class="guarantees__cards">
           <div>
-            <h2><span>1.</span> Уникальность текста</h2>
+            <h2>
+              <span>1.</span> Уникальность текста<img
+                src="./assets/images/dropdown_arrow.svg"
+              />
+            </h2>
             <p>
               Самая сложная и качественная система проверки на оригинальность
               текста в России - это ап.ВУЗ, и мы знаем о ней всё: модули
@@ -443,7 +548,11 @@
           <div class="guarantees__cards-column">
             <div class="guarantees__cards-row">
               <div>
-                <h2><span>2.</span> Юридическая безопасность</h2>
+                <h2>
+                  <span>2.</span> Юридическая безопасность<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
                 <p>
                   Всем клиентам мы предлагаем заключить с нашей организацией
                   договор, который исключает твои риски. У нас всё просто и без
@@ -452,7 +561,11 @@
                 </p>
               </div>
               <div>
-                <h2><span>3.</span> Актуальность исследования</h2>
+                <h2>
+                  <span>3.</span> Актуальность исследования<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
                 <p>
                   Мы готовы предоставить всю информацию по собранным данным и
                   источникам, обработке и систематизации информации. При этом,
@@ -463,7 +576,8 @@
             <div class="guarantees__cards-row">
               <div>
                 <h2>
-                  <span>4.</span> Экспертные консультации и принцип открытости
+                  <span>4.</span> Экспертные консультации и принцип
+                  открытости<img src="./assets/images/dropdown_arrow.svg" />
                 </h2>
                 <p>
                   Ты всегда можешь запросить информацию по исполнителю, который
@@ -473,7 +587,11 @@
                 </p>
               </div>
               <div>
-                <h2><span>5.</span> Минимальная предоплата</h2>
+                <h2>
+                  <span>5.</span> Минимальная предоплата<img
+                    src="./assets/images/dropdown_arrow.svg"
+                  />
+                </h2>
                 <p>
                   Наши клиенты не несут никаких финансовых рисков, соглашаясь на
                   сотрудничество с нами, ведь мы берем минимальную предоплату,
