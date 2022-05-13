@@ -23,6 +23,32 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <div class="header-mobile-contacts">
+      <ul>
+        <li>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/liga_znanij/?igshid=YmMyMTA2M2Y="
+            ><img src="./assets/images/insta.svg" alt="viber"
+          /></a>
+        </li>
+        <li>
+          <a href="tel:+7 925 877 22 25"
+            ><img src="./assets/images/tg.svg" alt="telegram"
+          /></a>
+        </li>
+        <li>
+          <a href="tel:+7 925 877 22 25"
+            ><img src="./assets/images/tel.svg" alt="whatsapp"
+          /></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://vk.com/ghostwriters1"
+            ><img src="./assets/images/vk.svg" alt="vk"
+          /></a>
+        </li>
+      </ul>
+    </div>
     <div class="background disable"></div>
     <div class="modal disable">
       <div class="error disable">
@@ -70,10 +96,22 @@
           <button type="submit" class="button">Отправить</button>
           <div class="social-media">
             <ul>
-              <li><img src="./assets/images/viber-red.svg" alt="viber" /></li>
-              <li><img src="./assets/images/tg-red.svg" alt="telegram" /></li>
-              <li><img src="./assets/images/tel-red.svg" alt="whatsapp" /></li>
-              <li><img src="./assets/images/vk-red.svg" alt="vk" /></li>
+              <a
+                href="https://www.instagram.com/liga_znanij/?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                ><li>
+                  <img src="./assets/images/insta_red.svg" alt="viber" /></li
+              ></a>
+              <a href="tel:+7 925 877 22 25"
+                ><li><img src="./assets/images/tg-red.svg" alt="telegram" /></li
+              ></a>
+              <a href="tel:+7 925 877 22 25"
+                ><li>
+                  <img src="./assets/images/tel-red.svg" alt="whatsapp" /></li
+              ></a>
+              <a href="https://vk.com/ghostwriters1" target="_blank"
+                ><li><img src="./assets/images/vk-red.svg" alt="vk" /></li
+              ></a>
             </ul>
           </div>
           <div class="mail">
@@ -86,12 +124,12 @@
     <div class="header__burger off">
       <img src="./assets/images/cross.svg" alt="cross" />
       <ul>
-        <li>О нас</li>
-        <li>Виды работ</li>
-        <li>Почему выбирают нас</li>
-        <li>Как мы работаем</li>
-        <li>Наши гарантии</li>
-        <li>Контакты</li>
+        <a href="#about-us"><li>О нас</li></a>
+        <a href="#type"><li>Виды работ</li></a>
+        <a href="#team"><li>Почему выбирают нас</li></a>
+        <a href="#work"><li>Как мы работаем</li></a>
+        <a href="#guarantees"><li>Наши гарантии</li></a>
+        <a href="#footer"><li>Контакты</li></a>
       </ul>
     </div>
     <header class="header">
@@ -110,8 +148,10 @@
           <div class="header__nav_contact-info-social-media">
             <ul>
               <li>
-                <a href="tel:+7 925 877 22 25"
-                  ><img src="./assets/images/viber.svg" alt="viber"
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/liga_znanij/?igshid=YmMyMTA2M2Y="
+                  ><img src="./assets/images/insta.svg" alt="viber"
                 /></a>
               </li>
               <li>
@@ -620,16 +660,16 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer__info">
         <section class="footer__info__section">
           <nav>
             <ul>
-              <li>О нас</li>
-              <li>Виды работ</li>
-              <li>Наши гарантии</li>
-              <li>Почему выбирают нас</li>
-              <li>Как мы работаем</li>
+              <a href="#about-us"><li>О нас</li></a>
+              <a href="#type"><li>Виды работ</li></a>
+              <a href="#team"><li>Почему выбирают нас</li></a>
+              <a href="#work"><li>Как мы работаем</li></a>
+              <a href="#guarantees"><li>Наши гарантии</li></a>
               <li>Для авторов</li>
             </ul>
           </nav>
@@ -652,10 +692,28 @@
           <h6>Социальные сети</h6>
           <nav>
             <ul class="footer__social-media">
-              <li><img src="./assets/images/viber.svg" alt="viber" /></li>
-              <li><img src="./assets/images/tg.svg" alt="telegram" /></li>
-              <li><img src="./assets/images/tel.svg" alt="whatsapp" /></li>
-              <li><img src="./assets/images/vk.svg" alt="vk" /></li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://instagram.com/liga_znanij?igshid=YmMyMTA2M2Y="
+                  ><img src="./assets/images/insta.svg" alt="telegram"
+                /></a>
+              </li>
+              <li>
+                <a href="tel:+7 925 877 22 25"
+                  ><img src="./assets/images/tg.svg" alt="telegram"
+                /></a>
+              </li>
+              <li>
+                <a href="tel:+7 925 877 22 25"
+                  ><img src="./assets/images/tel.svg" alt="whatsapp"
+                /></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://vk.com/ghostwriters1"
+                  ><img src="./assets/images/vk.svg" alt="vk"
+                /></a>
+              </li>
             </ul>
           </nav>
         </section>

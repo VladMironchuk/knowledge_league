@@ -27,6 +27,11 @@ p {
   display: none;
 }
 
+.header-mobile-contacts {
+  position: absolute;
+  visibility: hidden;
+}
+
 .header {
   background-color: var(--blue);
   padding: calc(48 / 1920 * 100vw) calc((151 / 1920) * 100vw)
@@ -1058,7 +1063,7 @@ a {
   }
 
   .card {
-    padding: 0;
+    padding: calc(10 / 375 * 100vw) 0 0 0;
     width: calc(305 / 375 * 100vw);
     border-radius: calc(30 / 375 * 100vw);
     height: calc(522 / 375 * 100vw);
@@ -1349,6 +1354,7 @@ a {
     display: flex;
     justify-content: center;
     gap: calc(24 / 375 * 100vw);
+    margin-top: calc(10 / 375 * 100vw);
   }
 
   .arrow2 {
@@ -1368,6 +1374,7 @@ a {
     width: calc(20 / 375 * 100vw);
     height: calc(20 / 375 * 100vw);
     right: calc(2 / 375 * 100vw);
+    display: none;
   }
 
   .modal h1 {
@@ -1399,6 +1406,7 @@ a {
   .modal .task {
     font-size: calc(12 / 375 * 100vw);
     line-height: calc(20 / 375 * 100vw);
+    margin-top: calc(20 / 375 * 100vw);
   }
 
   .modal textarea {
@@ -1447,7 +1455,7 @@ a {
   .modal .bottom .button {
     width: calc(268 / 375 * 100vw);
     position: absolute;
-    top: calc(288 / 375 * 100vw);
+    top: calc(315 / 375 * 100vw);
   }
 
   .modal .error {
@@ -1512,5 +1520,25 @@ a {
   .header__burger li:active {
     background-color: #f5f5f6;
     color: #000;
+  }
+
+  .header-mobile-contacts {
+    visibility: visible;
+    top: calc(26 / 375 * 100vw);
+    left: calc(195 / 375 * 100vw);
+  }
+
+  .header-mobile-contacts ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: calc(5 / 375 * 100vw);
+  }
+
+  .header-mobile-contacts img {
+    width: calc(25 / 375 * 100vw);
+    height: calc(25 / 375 * 100vw);
   }
 }

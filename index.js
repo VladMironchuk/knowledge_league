@@ -23,6 +23,11 @@ function hideModal() {
   modal.classList.add('disable');
 }
 
+background.addEventListener('click', () => {
+  hideModal();
+  closeBurger();
+});
+
 //logic connected to a carousel
 const arrows = document.querySelectorAll('.arrow');
 const arrowsSvg = document.querySelectorAll('.arrow path');
@@ -40,8 +45,10 @@ function scrollCarousel(event) {
     switch (event.currentTarget.dataset.direction) {
       case 'right': {
         if (counter === -6) {
-          arrowsController('right', 'off');
           return;
+        }
+        if (counter === -5) {
+          arrowsController('right', 'off');
         }
         arrowsController('left', 'on');
         cards.style.transform = `translateX(${
@@ -51,8 +58,10 @@ function scrollCarousel(event) {
       }
       case 'left': {
         if (counter === 0) {
-          arrowsController('left', 'off');
           return;
+        }
+        if (counter === -1) {
+          arrowsController('left', 'off');
         }
         arrowsController('right', 'on');
         cards.style.transform = `translateX(${
@@ -190,11 +199,29 @@ arrows2.forEach((item) => {
   item.addEventListener('click', onClickArrows2);
 });
 
+const arrowsSvg2 = document.querySelectorAll('.arrow2 path');
+
+function arrows2Controller(direction, toggle) {
+  if (direction === 'left') {
+    arrowsSvg2[0].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+    arrowsSvg2[1].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+  }
+  if (direction === 'right') {
+    arrowsSvg2[2].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+    arrowsSvg2[3].style.stroke = toggle === 'on' ? '#F64C71' : '#999999';
+  }
+}
+
 let counter2 = 0;
+arrows2Controller('left', 'off');
 function onClickArrows2(e) {
   switch (e.currentTarget.dataset.direction) {
     case 'right':
       if (counter2 === -4) return;
+      if (counter2 === -3) {
+        arrows2Controller('right', 'off');
+      }
+      arrows2Controller('left', 'on');
       pluses.forEach((plus) => {
         plus.style.transform = `translateX(${
           (296 / 375) * 100 * (counter2 - 1)
@@ -204,6 +231,10 @@ function onClickArrows2(e) {
       break;
     case 'left':
       if (counter2 === 0) return;
+      if (counter2 === -1) {
+        arrows2Controller('left', 'off');
+      }
+      arrows2Controller('right', 'on');
       pluses.forEach((plus) => {
         plus.style.transform = `translateX(${
           (296 / 375) * 100 * (counter2 + 1)
@@ -220,14 +251,21 @@ const headerDropdown = document.querySelector('.header__dropdown');
 const headerBurger = document.querySelector('.header__burger ');
 const headerBurgerCross = document.querySelector('.header__burger img');
 
+const burgerLinks = document.querySelectorAll('.header__burger a');
+
 headerDropdown.addEventListener('click', () => {
   background.classList.remove('disable');
   headerBurger.classList.remove('off');
   document.body.style.overflowY = 'hidden';
 });
 
-headerBurgerCross.addEventListener('click', () => {
+const closeBurger = () => {
   background.classList.add('disable');
   headerBurger.classList.add('off');
   document.body.style.overflowY = 'overlay';
+};
+
+headerBurgerCross.addEventListener('click', closeBurger);
+burgerLinks.forEach((item) => {
+  item.addEventListener('click', closeBurger);
 });
