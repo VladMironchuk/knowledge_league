@@ -6,6 +6,10 @@
   --yellow: #fec331;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -120,23 +124,23 @@ p {
   padding: 0;
 }
 
-.header__nav_site-nav ul li:first-child {
+.header__nav_site-nav ul a:first-child li {
   width: calc(55 / 1920 * 100vw);
 }
 
-.header__nav_site-nav ul li:nth-child(2) {
+.header__nav_site-nav ul a:nth-child(2) li {
   width: calc(117 / 1920 * 100vw);
 }
 
-.header__nav_site-nav ul li:nth-child(3) {
+.header__nav_site-nav ul a:nth-child(3) li {
   width: calc(221 / 1920 * 100vw);
 }
 
-.header__nav_site-nav ul li:nth-child(4) {
+.header__nav_site-nav ul a:nth-child(4) li {
   width: calc(171 / 1920 * 100vw);
 }
 
-.header__nav_site-nav ul li:nth-child(5) {
+.header__nav_site-nav ul a:nth-child(5) li {
   width: calc(153 / 1920 * 100vw);
 }
 
@@ -144,7 +148,10 @@ p {
   font-size: calc(18 / 1920 * 100vw);
   font-weight: 700;
   color: #fff;
-  min-width: min-content;
+}
+
+a {
+  text-decoration: none;
 }
 
 .button {
@@ -1074,7 +1081,7 @@ p {
 
   .card li {
     font-size: calc(16 / 375 * 100vw);
-    line-height: calc(30 / 375 * 100vw);
+    line-height: calc(26 / 375 * 100vw);
   }
 
   .card .button {
@@ -1135,6 +1142,10 @@ p {
 
   .guarantees__cards-row {
     flex-direction: column;
+  }
+
+  .guarantees__cards-row:nth-child(2) {
+    margin-top: calc(30 / 375 * 100vw);
   }
 
   .guarantees img {

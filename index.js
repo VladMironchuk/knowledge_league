@@ -64,24 +64,30 @@ function scrollCarousel(event) {
     switch (event.currentTarget.dataset.direction) {
       case 'right': {
         if (counter === -3) {
-          arrowsController('right', 'off');
           return;
+        }
+        if (counter === -2) {
+          arrowsController('right', 'off');
         }
         arrowsController('left', 'on');
         cards.style.transform = `translateX(${
           (412 / 1920) * 100 * --counter
         }vw)`;
+        console.log(counter);
         break;
       }
       case 'left': {
         if (counter === 0) {
-          arrowsController('left', 'off');
           return;
+        }
+        if (counter === -1) {
+          arrowsController('left', 'off');
         }
         arrowsController('right', 'on');
         cards.style.transform = `translateX(${
           (412 / 1920) * 100 * ++counter
         }vw)`;
+        console.log(counter);
       }
     }
   }
