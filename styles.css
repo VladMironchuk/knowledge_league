@@ -1362,6 +1362,18 @@ a {
     height: calc(18 / 375 * 100vw);
   }
 
+  .arrow2:hover {
+    cursor: pointer;
+  }
+
+  .arrow2:hover path {
+    stroke: #d82e32 !important;
+  }
+
+  .arrow2:active path {
+    stroke: #b72023 !important;
+  }
+
   .modal {
     border-radius: calc(10 / 375 * 100vw);
     top: calc(40 / 375 * 100vw);

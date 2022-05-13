@@ -82,7 +82,6 @@ function scrollCarousel(event) {
         cards.style.transform = `translateX(${
           (412 / 1920) * 100 * --counter
         }vw)`;
-        console.log(counter);
         break;
       }
       case 'left': {
@@ -96,7 +95,6 @@ function scrollCarousel(event) {
         cards.style.transform = `translateX(${
           (412 / 1920) * 100 * ++counter
         }vw)`;
-        console.log(counter);
       }
     }
   }
