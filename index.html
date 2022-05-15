@@ -67,7 +67,23 @@
           <li>Другое</li>
         </ul>
       </div>
-      <img class="cross" src="./assets/images/cross.svg" alt="cross" />
+      <svg
+        class="cross"
+        width="44"
+        height="44"
+        viewBox="0 0 44 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22 2.75C11.275 2.75 2.75 11.275 2.75 22C2.75 32.725 11.275 41.25 22 41.25C32.725 41.25 41.25 32.725 41.25 22C41.25 11.275 32.725 2.75 22 2.75ZM22 38.5C12.925 38.5 5.5 31.075 5.5 22C5.5 12.925 12.925 5.5 22 5.5C31.075 5.5 38.5 12.925 38.5 22C38.5 31.075 31.075 38.5 22 38.5Z"
+          fill="#999999"
+        />
+        <path
+          d="M29.425 31.625L22 24.2L14.575 31.625L12.375 29.425L19.8 22L12.375 14.575L14.575 12.375L22 19.8L29.425 12.375L31.625 14.575L24.2 22L31.625 29.425L29.425 31.625Z"
+          fill="#999999"
+        />
+      </svg>
       <h1>Заказать консультацию</h1>
       <h2>С чем тебе требуется помощь?</h2>
       <form>
@@ -77,7 +93,7 @@
           alt="arrow"
         />
         <div class="modal-input-wrapper">
-          <input type="tel" placeholder="Телефон *" />
+          <input type="tel" placeholder="Телефон или e-mail *" />
           <input
             readonly
             type="text"
@@ -85,11 +101,12 @@
             placeholder="Вид работы"
           />
         </div>
+        <p class="connection">для связи с тобой</p>
         <p class="task">Опиши задачу</p>
         <textarea name="task" id="id"></textarea>
         <div class="contacts">
           <p>Телефон:</p>
-          <p>+7 925 877 22 25</p>
+          <p>+7 910 424 57 94</p>
           <p>+375 29 169 70 00</p>
         </div>
         <div class="bottom">
@@ -102,10 +119,10 @@
                 ><li>
                   <img src="./assets/images/insta_red.svg" alt="viber" /></li
               ></a>
-              <a href="tel:+7 925 877 22 25"
+              <a href="tel:+7 910 424 57 94"
                 ><li><img src="./assets/images/tg-red.svg" alt="telegram" /></li
               ></a>
-              <a href="tel:+7 925 877 22 25"
+              <a href="tel:+7 910 424 57 94"
                 ><li>
                   <img src="./assets/images/tel-red.svg" alt="whatsapp" /></li
               ></a>
@@ -116,7 +133,7 @@
           </div>
           <div class="mail">
             <p>Электронная почта:</p>
-            <p>ghostwriters.info@gmail.com</p>
+            <p>ligaznanij.info@gmail.com</p>
           </div>
         </div>
       </form>
@@ -155,12 +172,12 @@
                 /></a>
               </li>
               <li>
-                <a href="tel:+7 925 877 22 25"
+                <a href="tel:+7 910 424 57 94"
                   ><img src="./assets/images/tg.svg" alt="telegram"
                 /></a>
               </li>
               <li>
-                <a href="tel:+7 925 877 22 25"
+                <a href="tel:+7 910 424 57 94"
                   ><img src="./assets/images/tel.svg" alt="whatsapp"
                 /></a>
               </li>
@@ -174,7 +191,7 @@
           <div class="header__nav_contact-info-contacts">
             <img src="./assets/images/phone.svg" alt="call" />
             <div>
-              <p>+7 925 877 22 25</p>
+              <p>+7 910 424 57 94</p>
               <p>+375 29 169 70 00</p>
             </div>
           </div>
@@ -248,7 +265,7 @@
                   <li>Заявленный уровень оригинальности;</li>
                   <li>Описывает теоретические положения;</li>
                   <li>Имеет практическую или эмпирическую часть;</li>
-                  <li>Выносит на защиту предложения проектной части;</li>
+                  <li>Выносит на защиту предложения в проектной части;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
                 <button class="button">консультация</button>
@@ -263,7 +280,7 @@
                   <li>Заявленный уровень оригинальности;</li>
                   <li>Описывает теоретические положения;</li>
                   <li>Имеет практическую или эмпирическую часть;</li>
-                  <li>Выносит на защиту предложения проектной части;</li>
+                  <li>Выносит на защиту предложения в проектной части;</li>
                   <li>Выдвигает и подтверждает гипотезу;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
@@ -304,7 +321,7 @@
                 <ul>
                   <li>Раскрывает актуальность темы сегодняшнего дня;</li>
                   <li>Соответствует заявленному уровню оригинальности;</li>
-                  <li>Отвечает требованиям РИНЦ и ВАК.</li>
+                  <li>Отвечает требованиям РИНЦ / ВАК.</li>
                 </ul>
                 <button class="button">консультация</button>
               </div>
@@ -314,9 +331,7 @@
                 <p class="time">от 1 дня</p>
                 <div class="line"></div>
                 <ul>
-                  <li>Раскрывает актуальность темы сегодняшнего дня;</li>
-                  <li>Соответствует заявленному уровню оригинальности;</li>
-                  <li>Отвечает требованиям РИНЦ и ВАК.</li>
+                  <li>Другие виды научных работ по заявленным требованиям;</li>
                 </ul>
                 <button class="button">консультация</button>
               </div>
@@ -561,8 +576,9 @@
           <div class="case">
             <img src="./assets/images/how2.png" alt="" />
             <p>
-              Ожидаем внесения <span>аванса</span> и мы <span>приступаем</span>
-              <br />к заказу
+              Ожидаем внесения <span>аванса</span> и мы
+              <span>приступаем</span> к выполнению<br />
+              заказу
             </p>
           </div>
           <div class="case">
@@ -575,7 +591,7 @@
           <div class="case">
             <img src="./assets/images/how4.png" alt="" />
             <p>
-              Изучаешь полученную работу и успешно
+              Получаешь выполненный заказ и успешно
               <span>защищаешь <br />работу</span>
             </p>
           </div>
@@ -586,7 +602,7 @@
         <div class="guarantees__cards">
           <div>
             <h2>
-              <span>1.</span> Уникальность текста<img
+              <span>1</span> Уникальность текста<img
                 src="./assets/images/dropdown_arrow.svg"
               />
             </h2>
@@ -598,14 +614,14 @@
               доступ к системе проверки. А департамент качества следит за
               оригинальностью работ и проводит мастер-классы по написанию
               оригинальных работ. Разумеется, если мы работаем с самой сложной
-              системой проверки, то и с другими тоже).
+              системой проверки, то и с другими тоже)
             </p>
           </div>
           <div class="guarantees__cards-column">
             <div class="guarantees__cards-row">
               <div>
                 <h2>
-                  <span>2.</span> Юридическая безопасность<img
+                  <span>2</span> Юридическая безопасность<img
                     src="./assets/images/dropdown_arrow.svg"
                   />
                 </h2>
@@ -618,7 +634,7 @@
               </div>
               <div>
                 <h2>
-                  <span>3.</span> Актуальность исследования<img
+                  <span>3</span> Актуальность исследования<img
                     src="./assets/images/dropdown_arrow.svg"
                   />
                 </h2>
@@ -632,7 +648,7 @@
             <div class="guarantees__cards-row">
               <div>
                 <h2>
-                  <span>4.</span> Экспертные консультации и принцип
+                  <span>4</span> Экспертные консультации и принцип
                   открытости<img src="./assets/images/dropdown_arrow.svg" />
                 </h2>
                 <p>
@@ -644,7 +660,7 @@
               </div>
               <div>
                 <h2>
-                  <span>5.</span> Минимальная предоплата<img
+                  <span>5</span> Минимальная предоплата<img
                     src="./assets/images/dropdown_arrow.svg"
                   />
                 </h2>
@@ -665,18 +681,22 @@
         <section class="footer__info__section">
           <nav>
             <ul>
-              <a href="#about-us"><li>О нас</li></a>
-              <a href="#types"><li>Виды работ</li></a>
-              <a href="#team"><li>Почему выбирают нас</li></a>
-              <a href="#work"><li>Как мы работаем</li></a>
-              <a href="#guarantees"><li>Наши гарантии</li></a>
+              <a class="footer-nav" href="#about-us"><li>О нас</li></a>
+              <a class="footer-nav" href="#types"><li>Виды работ</li></a>
+              <a class="footer-nav" href="#team"
+                ><li>Почему выбирают нас</li></a
+              >
+              <a class="footer-nav" href="#work"><li>Как мы работаем</li></a>
+              <a class="footer-nav" href="#guarantees"
+                ><li>Наши гарантии</li></a
+              >
               <li>Для авторов</li>
             </ul>
           </nav>
         </section>
         <section class="footer__info__section">
           <h6>Телефон:</h6>
-          <p>+7 925 877 22 25</p>
+          <p>+7 910 424 57 94</p>
           <p>+375 29 169 70 00</p>
         </section>
         <section class="footer__info__section">
@@ -700,12 +720,12 @@
                 /></a>
               </li>
               <li>
-                <a href="tel:+7 925 877 22 25"
+                <a href="tel:+7 910 424 57 94"
                   ><img src="./assets/images/tg.svg" alt="telegram"
                 /></a>
               </li>
               <li>
-                <a href="tel:+7 925 877 22 25"
+                <a href="tel:+7 910 424 57 94"
                   ><img src="./assets/images/tel.svg" alt="whatsapp"
                 /></a>
               </li>

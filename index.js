@@ -116,10 +116,15 @@ const dropdownArrow = document.querySelector('.modal .arrow');
 const dropdown = document.querySelector('.modal .dropdown');
 const dropdownItems = document.querySelectorAll('.modal .dropdown li');
 const input = document.querySelector('.modal form input[type="text"]');
+const input2 = document.querySelector('.modal input:nth-child(2)');
 
-dropdownArrow.addEventListener('click', () => {
+function modalDropdown() {
   dropdown.classList.toggle('disable');
-});
+  console.log(dropdown);
+}
+
+dropdownArrow.addEventListener('click', modalDropdown);
+input2.addEventListener('click', modalDropdown);
 
 dropdownItems.forEach((item) => {
   item.addEventListener('click', (event) => {
@@ -131,7 +136,10 @@ dropdownItems.forEach((item) => {
 document.body.addEventListener('click', (event) => {
   if (
     !dropdown.classList.contains('disable') &&
-    !event.composedPath().includes(dropdownArrow)
+    !(
+      event.composedPath().includes(dropdownArrow) ||
+      event.composedPath().includes(input2)
+    )
   ) {
     dropdown.classList.add('disable');
   }
@@ -182,11 +190,11 @@ guaranteesArrows.forEach((item) => {
 
 //about team carousel
 
-const arrows2Container = document.querySelector('.arrows2');
+const arrowsContainer = document.querySelector('.arrows');
 
 window.addEventListener('load', () => {
   if (window.matchMedia('(max-width: 500px)').matches) {
-    arrows2Container.style.display = 'flex';
+    arrowsContainer.style.display = 'none';
   }
 });
 
@@ -242,6 +250,80 @@ function onClickArrows2(e) {
       break;
   }
 }
+
+//swipe
+
+const wrapper = document.querySelector('.wrapper');
+const wrapper2 = document.querySelector('.about-team__container');
+window.onload = () => {
+  let cardsStartX;
+  let cardsEndX;
+
+  let teamStartX;
+  let teamEndX;
+
+  wrapper.addEventListener('touchstart', (e) => {
+    cardsStartX = e.touches[0].clientX;
+  });
+
+  wrapper.addEventListener('touchend', (e) => {
+    cardsEndX = e.changedTouches[0].clientX;
+
+    if (cardsStartX > cardsEndX) {
+      if (counter === -6) {
+        return;
+      }
+      if (counter === -5) {
+        arrowsController('right', 'off');
+      }
+      arrowsController('left', 'on');
+      cards.style.transform = `translateX(${(305 / 375) * 100 * --counter}vw)`;
+    } else {
+      if (counter === 0) {
+        return;
+      }
+      if (counter === -1) {
+        arrowsController('left', 'off');
+      }
+      arrowsController('right', 'on');
+      cards.style.transform = `translateX(${(305 / 375) * 100 * ++counter}vw)`;
+    }
+  });
+
+  wrapper2.addEventListener('touchstart', (e) => {
+    teamStartX = e.touches[0].clientX;
+  });
+
+  wrapper2.addEventListener('touchend', (e) => {
+    teamEndX = e.changedTouches[0].clientX;
+
+    if (teamStartX > teamEndX) {
+      if (counter2 === -4) return;
+      if (counter2 === -3) {
+        arrows2Controller('right', 'off');
+      }
+      arrows2Controller('left', 'on');
+      pluses.forEach((plus) => {
+        plus.style.transform = `translateX(${
+          (296 / 375) * 100 * (counter2 - 1)
+        }vw)`;
+      });
+      --counter2;
+    } else {
+      if (counter2 === 0) return;
+      if (counter2 === -1) {
+        arrows2Controller('left', 'off');
+      }
+      arrows2Controller('right', 'on');
+      pluses.forEach((plus) => {
+        plus.style.transform = `translateX(${
+          (296 / 375) * 100 * (counter2 + 1)
+        }vw)`;
+      });
+      ++counter2;
+    }
+  });
+};
 
 //header dropdown
 
