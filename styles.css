@@ -1576,4 +1576,9 @@ a {
   .modal .connection {
     font-size: calc(10 / 375 * 100vw);
   }
+
+  .footer__info__section:nth-child(1) nav {
+    margin-right: 0;
+    width: auto;
+  }
 }
