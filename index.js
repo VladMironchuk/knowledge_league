@@ -2,16 +2,24 @@
 const buttons = document.querySelectorAll('.button');
 const background = document.querySelector('.background');
 const modal = document.querySelector('.modal');
-const cross = document.querySelector('.modal .cross');
+const cross = document.querySelectorAll('.cross');
 const cards = document.querySelector('.cards');
+
+let modalDropdownContent = '';
 
 buttons.forEach((item) => {
   item.addEventListener('click', showModal);
 });
 
-cross.addEventListener('click', hideModal);
+cross.forEach((item) => {
+  item.addEventListener('click', () => {
+    hideModal();
+    thanksModal.style.display = 'none';
+  });
+});
 
-function showModal() {
+function showModal(e) {
+  input.value = e.target.dataset.content || 'Выбрать вид работы';
   document.body.style.overflowY = 'hidden';
   background.classList.remove('disable');
   modal.classList.remove('disable');
@@ -21,11 +29,13 @@ function hideModal() {
   document.body.style.overflowY = 'overlay';
   background.classList.add('disable');
   modal.classList.add('disable');
+  phoneInput.value = '';
 }
 
 background.addEventListener('click', () => {
   hideModal();
   closeBurger();
+  thanksModal.style.display = 'none';
 });
 
 //logic connected to a carousel
@@ -120,7 +130,6 @@ const input2 = document.querySelector('.modal input:nth-child(2)');
 
 function modalDropdown() {
   dropdown.classList.toggle('disable');
-  console.log(dropdown);
 }
 
 dropdownArrow.addEventListener('click', modalDropdown);
@@ -150,11 +159,18 @@ const modalForm = document.querySelector('.modal form');
 const phoneInput = document.querySelector('.modal form input[type="tel"]');
 const validationError = document.querySelector('.modal .error');
 
+const thanksModal = document.querySelector('.thanks-modal');
+
 modalForm.addEventListener('submit', (event) => {
+  event.preventDefault();
   if (phoneInput.value === '') {
-    event.preventDefault();
     validationError.classList.remove('disable');
+    return;
   }
+  hideModal();
+  document.body.style.overflowY = 'hidden';
+  background.classList.remove('disable');
+  thanksModal.style.display = 'flex';
 });
 
 phoneInput.addEventListener('input', () => {
@@ -192,11 +208,11 @@ guaranteesArrows.forEach((item) => {
 
 const arrowsContainer = document.querySelector('.arrows');
 
-window.addEventListener('load', () => {
-  if (window.matchMedia('(max-width: 500px)').matches) {
-    arrowsContainer.style.display = 'none';
-  }
-});
+// window.addEventListener('load', () => {
+//   if (window.matchMedia('(max-width: 500px)').matches) {
+//     arrowsContainer.style.display = 'none';
+//   }
+// });
 
 const arrows2 = document.querySelectorAll('.arrow2');
 const pluses = document.querySelectorAll('.about-team__wrapper');
@@ -261,7 +277,6 @@ window.onload = () => {
 
   let teamStartX;
   let teamEndX;
-
   wrapper.addEventListener('touchstart', (e) => {
     cardsStartX = e.touches[0].clientX;
   });
@@ -269,7 +284,7 @@ window.onload = () => {
   wrapper.addEventListener('touchend', (e) => {
     cardsEndX = e.changedTouches[0].clientX;
 
-    if (cardsStartX - cardsEndX > 100) {
+    if (cardsStartX - cardsEndX > 150) {
       if (counter === -6) {
         return;
       }
@@ -278,7 +293,7 @@ window.onload = () => {
       }
       arrowsController('left', 'on');
       cards.style.transform = `translateX(${(305 / 375) * 100 * --counter}vw)`;
-    } else if (cardsStartX - cardsEndX < 100) {
+    } else if (cardsStartX - cardsEndX < -150) {
       if (counter === 0) {
         return;
       }
@@ -297,7 +312,7 @@ window.onload = () => {
   wrapper2.addEventListener('touchend', (e) => {
     teamEndX = e.changedTouches[0].clientX;
 
-    if (teamStartX - teamEndX > 100) {
+    if (teamStartX - teamEndX > 150) {
       if (counter2 === -4) return;
       if (counter2 === -3) {
         arrows2Controller('right', 'off');
@@ -309,7 +324,7 @@ window.onload = () => {
         }vw)`;
       });
       --counter2;
-    } else if (teamStartX - teamEndX < 100) {
+    } else if (teamStartX - teamEndX < -150) {
       if (counter2 === 0) return;
       if (counter2 === -1) {
         arrows2Controller('left', 'off');

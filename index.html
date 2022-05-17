@@ -23,6 +23,28 @@
     <script defer src="index.js"></script>
   </head>
   <body>
+    <div class="thanks-modal">
+      <svg
+        class="cross"
+        width="44"
+        height="44"
+        viewBox="0 0 44 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22 2.75C11.275 2.75 2.75 11.275 2.75 22C2.75 32.725 11.275 41.25 22 41.25C32.725 41.25 41.25 32.725 41.25 22C41.25 11.275 32.725 2.75 22 2.75ZM22 38.5C12.925 38.5 5.5 31.075 5.5 22C5.5 12.925 12.925 5.5 22 5.5C31.075 5.5 38.5 12.925 38.5 22C38.5 31.075 31.075 38.5 22 38.5Z"
+          fill="#999999"
+        />
+        <path
+          d="M29.425 31.625L22 24.2L14.575 31.625L12.375 29.425L19.8 22L12.375 14.575L14.575 12.375L22 19.8L29.425 12.375L31.625 14.575L24.2 22L31.625 29.425L29.425 31.625Z"
+          fill="#999999"
+        />
+      </svg>
+      <h1>Спасибо за отправленную заявку!</h1>
+      <img src="./assets/images/thanks.svg" alt="" />
+      <p>Наши специалисты свяжутся с тобой в течение 3-х минут.</p>
+    </div>
     <div class="header-mobile-contacts">
       <ul>
         <li>
@@ -30,6 +52,11 @@
             target="_blank"
             href="https://www.instagram.com/liga_znanij/?igshid=YmMyMTA2M2Y="
             ><img src="./assets/images/insta.svg" alt="viber"
+          /></a>
+        </li>
+        <li>
+          <a href="tel:+7 925 877 22 25"
+            ><img src="./assets/images/viber.svg" alt="viber"
           /></a>
         </li>
         <li>
@@ -120,6 +147,9 @@
                   <img src="./assets/images/insta_red.svg" alt="viber" /></li
               ></a>
               <a href="tel:+7 910 424 57 94"
+                ><li><img src="./assets/images/viber-red.svg" alt="viber" /></li
+              ></a>
+              <a href="tel:+7 910 424 57 94"
                 ><li><img src="./assets/images/tg-red.svg" alt="telegram" /></li
               ></a>
               <a href="tel:+7 910 424 57 94"
@@ -168,7 +198,12 @@
                 <a
                   target="_blank"
                   href="https://www.instagram.com/liga_znanij/?igshid=YmMyMTA2M2Y="
-                  ><img src="./assets/images/insta.svg" alt="viber"
+                  ><img src="./assets/images/insta.svg" alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="tel:+7 910 424 57 94"
+                  ><img src="./assets/images/viber.svg" alt="viber"
                 /></a>
               </li>
               <li>
@@ -253,7 +288,9 @@
                   <li>Имеет практическую или эмпирическую часть;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Курсовая работа" class="button">
+                  консультация
+                </button>
               </div>
               <div class="card">
                 <h1>дипломная работа</h1>
@@ -268,7 +305,9 @@
                   <li>Выносит на защиту предложения в проектной части;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Дипломная работа" class="button">
+                  консультация
+                </button>
               </div>
               <div class="card">
                 <h1>магистерская диссертация</h1>
@@ -284,7 +323,9 @@
                   <li>Выдвигает и подтверждает гипотезу;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Магистерская диссертация" class="button">
+                  консультация
+                </button>
               </div>
               <div class="card">
                 <h1>эссе</h1>
@@ -298,7 +339,7 @@
                   <li>Исследование теоретических положений;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Эссе" class="button">консультация</button>
               </div>
               <div class="card">
                 <h1>реферат</h1>
@@ -311,7 +352,9 @@
                   <li>Описывает теоретические положения;</li>
                   <li>Оформлена по ГОСТу.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Реферат" class="button">
+                  консультация
+                </button>
               </div>
               <div class="card">
                 <h1>статья</h1>
@@ -323,7 +366,9 @@
                   <li>Соответствует заявленному уровню оригинальности;</li>
                   <li>Отвечает требованиям РИНЦ / ВАК.</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Статья" class="button">
+                  консультация
+                </button>
               </div>
               <div class="card">
                 <h1>другое</h1>
@@ -333,7 +378,9 @@
                 <ul>
                   <li>Другие виды научных работ по заявленным требованиям;</li>
                 </ul>
-                <button class="button">консультация</button>
+                <button data-content="Другое" class="button">
+                  консультация
+                </button>
               </div>
             </div>
           </div>
@@ -459,7 +506,7 @@
             </div>
           </div>
         </div>
-        <div class="arrows2" style="display: none">
+        <div class="arrows2">
           <svg
             data-direction="left"
             class="arrow2"
@@ -717,6 +764,11 @@
                   target="_blank"
                   href="https://instagram.com/liga_znanij?igshid=YmMyMTA2M2Y="
                   ><img src="./assets/images/insta.svg" alt="telegram"
+                /></a>
+              </li>
+              <li>
+                <a href="tel:+7 910 424 57 94"
+                  ><img src="./assets/images/viber.svg" alt="viber"
                 /></a>
               </li>
               <li>
