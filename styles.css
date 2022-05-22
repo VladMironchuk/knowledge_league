@@ -27,11 +27,6 @@ p {
   display: none;
 }
 
-.header-mobile-contacts {
-  position: absolute;
-  visibility: hidden;
-}
-
 .header {
   background-color: var(--blue);
   padding: calc(48 / 1920 * 100vw) calc((151 / 1920) * 100vw)
@@ -1567,12 +1562,13 @@ a {
     padding: calc(20 / 375 * 100vw) 0;
   }
 
-  .header__burger img {
+  .header__burger .cross {
     position: absolute;
     width: calc(15 / 375 * 100vw);
     height: calc(15 / 375 * 100vw);
     top: calc(5 / 375 * 100vw);
     right: calc(5 / 375 * 100vw);
+    display: block;
   }
 
   .header__burger ul {
@@ -1581,9 +1577,13 @@ a {
     list-style: none;
   }
 
+  .header__burger .header-mobile-contacts li {
+    padding: 0;
+  }
+
   .header__burger li {
     padding-left: calc(30 / 375 * 100vw);
-    padding-right: calc(15 / 375 * 100vw);
+    padding-right: calc(30 / 375 * 100vw);
     font-size: calc(14 / 375 * 100vw);
     line-height: calc(42 / 375 * 100vw);
     color: #999999;
@@ -1595,9 +1595,8 @@ a {
   }
 
   .header-mobile-contacts {
-    visibility: visible;
-    top: calc(29 / 375 * 100vw);
-    left: calc(195 / 375 * 100vw);
+    margin-left: calc(27 / 375 * 100vw);
+    margin-right: calc(20 / 375 * 100vw);
   }
 
   .header-mobile-contacts ul {
@@ -1606,12 +1605,16 @@ a {
     margin: 0;
     padding: 0;
     list-style: none;
-    gap: calc(5 / 375 * 100vw);
+    gap: calc(16 / 375 * 100vw);
+  }
+
+  .header-mobile-contacts li {
+    line-height: normal;
   }
 
   .header-mobile-contacts img {
-    width: calc(20 / 375 * 100vw);
-    height: calc(20 / 375 * 100vw);
+    width: calc(25 / 375 * 100vw);
+    height: calc(25 / 375 * 100vw);
   }
 
   .modal .connection {
@@ -1634,5 +1637,37 @@ a {
 
   .about-team {
     margin-top: calc(72 / 375 * 100vw);
+  }
+
+  .thanks-modal {
+    width: calc(350 / 375 * 100vw);
+    height: calc((693 - 13 - 30) / 841 * 100vh);
+    top: calc(50 / 375 * 100vw);
+    left: calc(13 / 375 * 100vw);
+    padding-top: calc(13 / 375 * 100vw);
+    padding-bottom: calc(30 / 375 * 100vw);
+    border-radius: calc(10 / 375 * 100vw);
+  }
+
+  .thanks-modal .cross {
+    width: calc(25 / 375 * 100vw);
+    height: calc(25 / 375 * 100vw);
+    display: block;
+  }
+
+  .thanks-modal h1 {
+    font-size: calc(20 / 375 * 100vw);
+    line-height: calc(30 / 375 * 100vw);
+    width: calc(250 / 375 * 100vw);
+  }
+
+  .thanks-modal img {
+    width: calc(125 / 375 * 100vw);
+  }
+
+  .thanks-modal p {
+    font-size: calc(14 / 375 * 100vw);
+    line-height: calc(26 / 375 * 100vw);
+    width: calc(221 / 375 * 100vw);
   }
 }
