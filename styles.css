@@ -32,7 +32,6 @@ p {
   padding: calc(48 / 1920 * 100vw) calc((151 / 1920) * 100vw)
     calc(24 / 1920 * 100vw);
   display: flex;
-  gap: calc((85 / 1920) * 100vw);
   justify-content: space-between;
 }
 
