@@ -933,7 +933,7 @@ a {
 }
 
 .thanks-modal {
-  position: absolute;
+  position: fixed;
   width: calc(980 / 1920 * 100vw);
   height: calc((640 - 40 - 96) / 1920 * 100vw);
   top: calc(150 / 1920 * 100vw);
@@ -1526,7 +1526,7 @@ a {
   }
 
   .modal .error {
-    top: calc(93 / 375 * 100vw);
+    top: calc(105 / 375 * 100vw);
   }
 
   .modal .error img:nth-child(1) {

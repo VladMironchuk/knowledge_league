@@ -284,7 +284,7 @@ window.onload = () => {
   wrapper.addEventListener('touchend', (e) => {
     cardsEndX = e.changedTouches[0].clientX;
 
-    if (cardsStartX - cardsEndX > 150) {
+    if (cardsStartX - cardsEndX > 100) {
       if (counter === -6) {
         return;
       }
@@ -293,7 +293,7 @@ window.onload = () => {
       }
       arrowsController('left', 'on');
       cards.style.transform = `translateX(${(305 / 375) * 100 * --counter}vw)`;
-    } else if (cardsStartX - cardsEndX < -150) {
+    } else if (cardsStartX - cardsEndX < -100) {
       if (counter === 0) {
         return;
       }
@@ -312,7 +312,7 @@ window.onload = () => {
   wrapper2.addEventListener('touchend', (e) => {
     teamEndX = e.changedTouches[0].clientX;
 
-    if (teamStartX - teamEndX > 150) {
+    if (teamStartX - teamEndX > 100) {
       if (counter2 === -4) return;
       if (counter2 === -3) {
         arrows2Controller('right', 'off');
@@ -324,7 +324,7 @@ window.onload = () => {
         }vw)`;
       });
       --counter2;
-    } else if (teamStartX - teamEndX < -150) {
+    } else if (teamStartX - teamEndX < -100) {
       if (counter2 === 0) return;
       if (counter2 === -1) {
         arrows2Controller('left', 'off');
