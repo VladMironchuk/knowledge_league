@@ -19,7 +19,10 @@ cross.forEach((item) => {
 });
 
 function showModal(e) {
-  input.value = e.target.dataset.content || 'Выбрать вид работы';
+  workType.value =
+    workType.value === 'Выбрать вид работы'
+      ? e.target.dataset.content || 'Выбрать вид работы'
+      : workType.value;
   document.body.style.overflowY = 'hidden';
   background.classList.remove('disable');
   modal.classList.remove('disable');
@@ -30,6 +33,8 @@ function hideModal() {
   background.classList.add('disable');
   modal.classList.add('disable');
   phoneInput.value = '';
+  workType.value = 'Выберите вид работы';
+  validationError.classList.add('disable');
 }
 
 background.addEventListener('click', () => {
@@ -125,19 +130,19 @@ function arrowsController(direction, toggle) {
 const dropdownArrow = document.querySelector('.modal .arrow');
 const dropdown = document.querySelector('.modal .dropdown');
 const dropdownItems = document.querySelectorAll('.modal .dropdown li');
-const input = document.querySelector('.modal form input[type="text"]');
-const input2 = document.querySelector('.modal input:nth-child(2)');
+// const telInput = document.querySelector('.modal form input:nth-clild(1)');
+const workType = document.querySelector('.modal input:nth-child(2)');
 
 function modalDropdown() {
   dropdown.classList.toggle('disable');
 }
 
 dropdownArrow.addEventListener('click', modalDropdown);
-input2.addEventListener('click', modalDropdown);
+workType.addEventListener('click', modalDropdown);
 
 dropdownItems.forEach((item) => {
   item.addEventListener('click', (event) => {
-    input.value = event.target.textContent;
+    workType.value = event.target.textContent;
     dropdown.classList.add('disable');
   });
 });
@@ -147,7 +152,7 @@ document.body.addEventListener('click', (event) => {
     !dropdown.classList.contains('disable') &&
     !(
       event.composedPath().includes(dropdownArrow) ||
-      event.composedPath().includes(input2)
+      event.composedPath().includes(workType)
     )
   ) {
     dropdown.classList.add('disable');
@@ -156,7 +161,7 @@ document.body.addEventListener('click', (event) => {
 
 //modal validation
 const modalForm = document.querySelector('.modal form');
-const phoneInput = document.querySelector('.modal form input[type="tel"]');
+const phoneInput = document.querySelector('.modal form input:nth-child(1)');
 const validationError = document.querySelector('.modal .error');
 
 const thanksModal = document.querySelector('.thanks-modal');
@@ -207,12 +212,6 @@ guaranteesArrows.forEach((item) => {
 //about team carousel
 
 const arrowsContainer = document.querySelector('.arrows');
-
-// window.addEventListener('load', () => {
-//   if (window.matchMedia('(max-width: 500px)').matches) {
-//     arrowsContainer.style.display = 'none';
-//   }
-// });
 
 const arrows2 = document.querySelectorAll('.arrow2');
 const pluses = document.querySelectorAll('.about-team__wrapper');

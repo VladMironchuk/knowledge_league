@@ -10,6 +10,15 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.arrows2 {
+  display: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -112,13 +121,13 @@ p {
 .header__nav_site-nav {
   display: flex;
   margin-top: calc(15 / 1920 * 100vw);
-  align-items: center;
+  align-items: flex-end;
 }
 
 .header__nav_site-nav ul {
   display: flex;
   list-style: none;
-  margin: 0 calc(23 / 1920 * 100vw) 0 0;
+  margin: 0 calc(23 / 1920 * 100vw) calc(10 / 1920 * 100vw) 0;
   gap: calc(30 / 1920 * 100vw);
   padding: 0;
 }
@@ -130,11 +139,11 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding-bottom: 1px;
+  border-bottom: calc(10 / 1920 * 100vw) solid var(--blue);
 }
 
 .header__nav_site-nav ul li:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom-color: #fff;
 }
 
 a {
@@ -506,7 +515,7 @@ a {
 
 .working__arrow.third {
   top: calc(206 / 1920 * 100vw);
-  left: calc(1247 / 1920 * 100vw);
+  left: calc(1234 / 1920 * 100vw);
 }
 
 .guarantees {
@@ -598,12 +607,44 @@ a {
 
 .footer-nav {
   display: block;
-  padding-left: calc(10 / 1920 * 100vw);
 }
 
-.footer-nav:hover {
-  border-left: calc(5 / 1920 * 100vw) solid #fff;
-  padding-left: calc(5 / 1920 * 100vw);
+.footer__info__section:nth-child(1) li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.footer-nav-border {
+  width: calc(5 / 1920 * 100vw);
+  height: calc(18 / 1920 * 100vw);
+  background-color: var(--blue);
+  border-radius: calc(10 / 1920 * 100vw);
+}
+
+.footer__info__section:nth-child(1) li:nth-child(1):hover {
+  --blue: #fff;
+}
+
+.footer__info__section:nth-child(1) li:nth-child(2):hover {
+  --blue: #fff;
+}
+
+.footer__info__section:nth-child(1) li:nth-child(3):hover {
+  --blue: #fff;
+}
+
+.footer__info__section:nth-child(1) li:nth-child(4):hover {
+  --blue: #fff;
+}
+
+.footer__info__section:nth-child(1) li:nth-child(5):hover {
+  --blue: #fff;
+}
+
+.footer__info__section:nth-child(1) li:nth-child(6):hover {
+  --blue: #fff;
 }
 
 .footer__info__section:nth-child(1) {
@@ -773,9 +814,12 @@ a {
 
 .modal .task {
   font-size: calc(18 / 1920 * 100vw);
-  line-height: calc(33 / 1920 * 100vw);
   font-weight: 400;
   margin-top: calc(24 / 1920 * 100vw);
+  color: rgba(153, 153, 153, 1);
+  border-bottom: 1px solid rgb(153, 153, 153);
+  width: calc(409 / 1920 * 100vw);
+  padding-left: calc(7 / 1920 * 100vw);
 }
 
 .modal textarea {
@@ -787,6 +831,7 @@ a {
   border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 10px;
+  margin-top: 5px;
 }
 
 .modal .contacts {
@@ -909,6 +954,8 @@ a {
 .modal form .arrow {
   position: absolute;
   right: calc(62 / 1920 * 100vw);
+  width: calc(21 / 1920 * 100vw);
+  height: calc(18 / 1920 * 100vw);
 }
 
 .modal .error {
@@ -1473,6 +1520,7 @@ a {
     font-size: calc(12 / 375 * 100vw);
     line-height: calc(20 / 375 * 100vw);
     margin-top: calc(20 / 375 * 100vw);
+    width: 100%;
   }
 
   .modal textarea {
@@ -1521,7 +1569,7 @@ a {
   .modal .bottom .button {
     width: calc(268 / 375 * 100vw);
     position: absolute;
-    top: calc(315 / 375 * 100vw);
+    top: calc(330 / 375 * 100vw);
   }
 
   .modal .error {
@@ -1668,5 +1716,13 @@ a {
     font-size: calc(14 / 375 * 100vw);
     line-height: calc(26 / 375 * 100vw);
     width: calc(221 / 375 * 100vw);
+  }
+
+  .footer-nav-border {
+    display: none;
+  }
+
+  .footer__info__section:nth-child(1) li {
+    justify-content: center;
   }
 }
