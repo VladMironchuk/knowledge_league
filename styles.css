@@ -796,6 +796,8 @@ a {
   padding: 0;
   outline: none;
   padding-left: calc(7 / 1920 * 100vw);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .modal input::placeholder {
@@ -1596,8 +1598,12 @@ a {
   }
 
   .modal .dropdown li {
-    font-size: calc(14 / 375 * 100vw);
-    line-height: calc(26 / 375 * 100vw);
+    font-size: calc(12 / 375 * 100vw);
+    line-height: calc(22 / 375 * 100vw);
+  }
+
+  .modal .cross {
+    display: block;
   }
 
   .header__burger {
