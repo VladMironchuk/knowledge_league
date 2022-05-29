@@ -33,7 +33,7 @@ function hideModal() {
   background.classList.add('disable');
   modal.classList.add('disable');
   phoneInput.value = '';
-  workType.value = 'Выберите вид работы';
+  workType.value = 'Выбрать вид работы';
   validationError.classList.add('disable');
 }
 
