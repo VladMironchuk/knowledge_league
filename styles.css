@@ -819,7 +819,7 @@ a {
   font-weight: 400;
   margin-top: calc(24 / 1920 * 100vw);
   color: rgba(153, 153, 153, 1);
-  border-bottom: 1px solid rgb(153, 153, 153);
+  /* border-bottom: 1px solid rgb(153, 153, 153); */
   width: calc(409 / 1920 * 100vw);
   padding-left: calc(7 / 1920 * 100vw);
 }
@@ -830,10 +830,9 @@ a {
   outline: none;
   height: calc(145 / 1920 * 100vw);
   font-family: 'Montserrat', sans-serif;
-  border: 1px solid #999999;
+  border: 1px solid rgba(153, 153, 153, 1);
   box-sizing: border-box;
   border-radius: 10px;
-  margin-top: 5px;
 }
 
 .modal .contacts {
