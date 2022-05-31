@@ -854,7 +854,7 @@ a {
   padding-left: calc(7 / 1920 * 100vw);
 }
 
-.modal textarea {
+.modal #id {
   width: 100%;
   resize: none;
   outline: none;
@@ -863,6 +863,9 @@ a {
   border: 1px solid rgba(153, 153, 153, 1);
   box-sizing: border-box;
   border-radius: 10px;
+  color: rgb(153, 153, 153);
+  font-size: calc(18 / 1920 * 100vw);
+  margin-top: calc(24 / 1920 * 100vw);
 }
 
 .modal .contacts {
@@ -1213,8 +1216,8 @@ a {
   }
 
   .card li {
-    font-size: calc(16 / 375 * 100vw);
-    line-height: calc(26 / 375 * 100vw);
+    font-size: 14px;
+    line-height: 26px;
   }
 
   .card .button {
@@ -1544,7 +1547,7 @@ a {
   .modal form .arrow {
     width: calc(12 / 375 * 100vw);
     right: calc(8 / 375 * 100vw);
-    top: calc(125 / 375 * 100vw);
+    top: calc(130 / 375 * 100vw);
   }
 
   .modal .task {
@@ -1554,8 +1557,10 @@ a {
     width: 100%;
   }
 
-  .modal textarea {
+  .modal #id {
     height: calc(100 / 375 * 100vw);
+    margin-top: calc(20 / 375 * 100vw);
+    font-size: calc(12 / 375 * 100vw);
   }
 
   .modal .contacts {
@@ -1646,10 +1651,10 @@ a {
 
   .header__burger .cross {
     position: absolute;
-    width: calc(15 / 375 * 100vw);
-    height: calc(15 / 375 * 100vw);
-    top: calc(5 / 375 * 100vw);
-    right: calc(5 / 375 * 100vw);
+    width: calc(26 / 375 * 100vw);
+    height: calc(26 / 375 * 100vw);
+    top: calc(10 / 375 * 100vw);
+    right: calc(10 / 375 * 100vw);
     display: block;
   }
 
@@ -1659,16 +1664,22 @@ a {
     list-style: none;
   }
 
+  .header__burger ul:nth-child(2) {
+    border-bottom: 1px solid #e6e7e8;
+    margin-left: calc(30 / 375 * 100vw);
+    margin-right: calc(30 / 375 * 100vw);
+    padding-bottom: calc(10 / 375 * 100vw);
+  }
+
   .header__burger .header-mobile-contacts li {
     padding: 0;
   }
 
   .header__burger li {
-    padding-left: calc(30 / 375 * 100vw);
-    padding-right: calc(30 / 375 * 100vw);
     font-size: calc(14 / 375 * 100vw);
     line-height: calc(42 / 375 * 100vw);
     color: #999999;
+    font-weight: 700;
   }
 
   .header__burger li:active {
@@ -1677,6 +1688,7 @@ a {
   }
 
   .header-mobile-contacts {
+    margin-top: calc(21 / 375 * 100vw);
     margin-left: calc(27 / 375 * 100vw);
     margin-right: calc(20 / 375 * 100vw);
   }
