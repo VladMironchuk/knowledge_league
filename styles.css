@@ -1262,7 +1262,6 @@ a {
     font-size: calc(16 / 375 * 100vw);
     line-height: calc(24 / 375 * 100vw);
     max-width: 100vw;
-    text-decoration: underline;
     margin-left: calc(20 / 375 * 100vw);
   }
 
