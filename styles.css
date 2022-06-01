@@ -831,6 +831,10 @@ a {
   box-shadow: none;
 }
 
+.modal input[type='text']:nth-child(1) {
+  color: var(--grey);
+}
+
 .modal input::placeholder {
   padding: 0;
 }
@@ -863,7 +867,7 @@ a {
   border: 1px solid rgba(153, 153, 153, 1);
   box-sizing: border-box;
   border-radius: 10px;
-  color: rgb(153, 153, 153);
+  color: var(--grey);
   font-size: calc(18 / 1920 * 100vw);
   margin-top: calc(24 / 1920 * 100vw);
 }
@@ -961,7 +965,7 @@ a {
   position: absolute;
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  top: calc(207 / 1920 * 100vw);
+  top: calc(209 / 1920 * 100vw);
   left: calc(338 / 1290 * 100vw);
   width: calc(418 / 1920 * 100vw);
 }
@@ -1524,6 +1528,10 @@ a {
     display: none;
   }
 
+  .modal form {
+    margin-top: calc(35 / 375 * 100vw);
+  }
+
   .modal h1 {
     font-size: calc(20 / 375 * 100vw);
     line-height: calc(30 / 375 * 100vw);
@@ -1547,7 +1555,8 @@ a {
   .modal form .arrow {
     width: calc(12 / 375 * 100vw);
     right: calc(8 / 375 * 100vw);
-    top: calc(130 / 375 * 100vw);
+    top: calc(152 / 375 * 100vw);
+    height: calc(12 / 375 * 100vw);
   }
 
   .modal .task {
@@ -1605,11 +1614,11 @@ a {
   .modal .bottom .button {
     width: calc(268 / 375 * 100vw);
     position: absolute;
-    top: calc(330 / 375 * 100vw);
+    top: calc(316 / 375 * 100vw);
   }
 
   .modal .error {
-    top: calc(105 / 375 * 100vw);
+    top: calc(128 / 375 * 100vw);
   }
 
   .modal .error img:nth-child(1) {
@@ -1626,7 +1635,7 @@ a {
 
   .modal .dropdown {
     width: calc(310 / 375 * 100vw);
-    top: calc(145 / 375 * 100vw);
+    top: calc(168 / 375 * 100vw);
     left: calc(10 / 375 * 100vw);
     z-index: 10;
   }
@@ -1771,5 +1780,18 @@ a {
 
   .footer__info__section:nth-child(1) li {
     justify-content: center;
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    @media screen and (max-width: 500px) {
+      .modal .dropdown {
+        top: calc(175 / 375 * 100vw);
+      }
+      .modal form .arrow {
+        top: calc(157 / 375 * 100vw);
+      }
+    }
   }
 }
